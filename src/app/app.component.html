@@ -1,0 +1,23 @@
+<mat-toolbar class="toolbar__header">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h2 class="toolbar__header--title">Avaliação MJV</h2>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav" #sidenav mode="side" opened>
+    <mat-nav-list class="sidenav__list">
+      <button class="sidenav__list--item" (click)="userList()">Lista de usuários</button>
+      <button class="sidenav__list--item" (click)="addUser()">Criação de usuários</button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content__container">
+      <router-outlet> 
+      </router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

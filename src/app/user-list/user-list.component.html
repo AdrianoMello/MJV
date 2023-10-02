@@ -1,0 +1,38 @@
+<div class="title">
+    <p class="title--txt">Lista de Usuários</p>
+    <p class="add__user" (click)="addUser()">Novo usuário</p>
+</div>
+
+<div class="page__nav">
+    <button class="page__nav--icon" (click)="prevPage()"><mat-icon>chevron_left</mat-icon></button>
+    <button class="page__nav--icon" (click)="nextPage()"><mat-icon>chevron_right</mat-icon></button>
+</div>
+
+<div class="user__list">
+    <div class="user__list--item" *ngFor="let user of users">
+        <div class="user__list--item-img">
+            <img class="picture" [src]="user.picture" />
+        </div>
+        <p class="user__list--item-txt">{{ user.title }} {{ user.firstName }} {{ user.lastName }}</p>
+        <div class="user__list--item-icons">
+            <mat-icon 
+                class="user__list--item-button" 
+                (click)="showUser(user.id)"
+            >
+                remove_red_eye
+            </mat-icon>
+            <mat-icon
+                class="user__list--item-button edit"
+                (click)="editUser(user.id)"
+            >
+                edit
+            </mat-icon>
+            <mat-icon
+                class="user__list--item-button delete"
+                (click)="deleteUser(user.id)"
+            >
+                delete
+            </mat-icon>
+        </div>
+    </div>
+</div>

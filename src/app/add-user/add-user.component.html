@@ -1,0 +1,110 @@
+<div class="btn-voltar">
+    <p class="voltar" (click)="voltar()">Voltar</p>
+</div>
+
+<div class="title">
+    <p class="title--txt">Adicionar Usuário</p>
+</div>
+
+<form method="post" (ngSubmit)="newUser()">
+    
+  <div class="group-inputs">
+    <div class="form-group">
+        <label for="firstName">Primeiro nome</label>
+        <input type="text" id="firstName" name="firstName"
+        class="form-control" placeholder="Primeiro nome"
+        [(ngModel)]="user.firstName" required/>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Último nome</label>
+        <input type="text" id="lastName" name="lastName"
+        class="form-control" placeholder="Último nome"
+        [(ngModel)]="user.lastName" required/>
+    </div>
+</div>
+
+<div class="group-inputs">
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email"
+        class="form-control" placeholder="E-mail"
+        [(ngModel)]="user.email" required email/>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="text" id="phone" name="phone"
+        class="form-control" placeholder="Telefone"
+        [(ngModel)]="user.phone" />
+    </div>
+</div>
+
+<div class="group-inputs">
+    <div class="form-group">
+        <label for="picture">Foto</label>
+        <input type="text" id="picture" name="picture"
+        class="form-control" placeholder="Foto"
+        [(ngModel)]="user.picture" />
+    </div>
+
+    <div class="form-group">
+        <label for="dateOfBirth">Nascimento</label>
+        <input type="text" id="dateOfBirth" name="dateOfBirth"
+        class="form-control" placeholder="Nascimento"
+        [(ngModel)]="user.dateOfBirth" />
+    </div>
+</div>
+
+<div class="group-inputs">
+    <div class="form-group">
+        <label for="title">Título</label>
+        <input type="text" id="title" name="title"
+        class="form-control" placeholder="Título"
+        [(ngModel)]="user.title" />
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gênero</label>
+        <input type="text" id="gender" name="gender"
+        class="form-control" placeholder="Gênero"
+        [(ngModel)]="user.gender" />
+    </div>
+</div>
+
+<div class="group-inputs">
+    <div class="form-group">
+        <label for="rua">Rua</label>
+        <input type="text" id="rua" name="Rua"
+        class="form-control" placeholder="Rua"
+        [(ngModel)]="user.street" />
+    </div>
+
+    <div class="form-group">
+        <label for="Cidade">Cidade</label>
+        <input type="text" id="Cidade" name="Cidade"
+        class="form-control" placeholder="Cidade"
+        [(ngModel)]="user.city" />
+    </div>
+</div>
+
+<div class="group-inputs">
+    <div class="form-group">
+        <label for="Estado">Estado</label>
+        <input type="text" id="Estado" name="Estado"
+        class="form-control" placeholder="Estado"
+        [(ngModel)]="user.state" />
+    </div>
+
+    <div class="form-group">
+        <label for="pais">País</label>
+        <input type="text" id="pais" name="pais"
+        class="form-control" placeholder="País"
+        [(ngModel)]="user.country" />
+    </div>
+</div>
+
+  <div class="align-button">
+    <button type="submit" class="btn-save">Salvar</button>
+  </div>
+</form>

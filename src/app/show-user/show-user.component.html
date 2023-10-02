@@ -1,0 +1,44 @@
+<div class="btn-voltar">
+    <p class="voltar" (click)="voltar()">Voltar</p>
+</div>
+
+<div class="title">
+    <p class="title--txt">Detalhes do Usuário</p>
+</div>
+
+<div class="user__infos">
+    <div class="user__infos--header">
+        <div *ngIf="user.picture" class="user__infos-img">
+            <img [src]="user.picture" class="picture" />
+        </div>
+        <div class="user__infos--icons">
+            <div *ngIf="user.firstName" class="user__infos--item">
+                <mat-icon>account_circle</mat-icon>
+                <p class="user__infos--item-txt">{{ user.title }} {{ user.firstName }} {{ user.lastName }}</p>
+            </div>
+            <div *ngIf="dataFormatada" class="user__infos--item">
+                <mat-icon>calendar_today</mat-icon>
+                <p class="user__infos--item-txt">{{ dataFormatada }}</p>
+            </div>
+            <div *ngIf="user.phone" class="user__infos--item">
+                <mat-icon>local_phone</mat-icon>
+                <p class="user__infos--item-txt">{{ user.phone }}</p>
+            </div>
+            <div *ngIf="user.email" class="user__infos--item">
+                <mat-icon>alternate_email</mat-icon>
+                <p class="user__infos--item-txt">{{ user.email }}</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="user.location" class="user__infos--footer">
+        <div class="user__infos--footer-icon">
+            <mat-icon>location_on</mat-icon>
+            <p class="user__infos--footer-txt">{{ user.location.street }} - {{ user.location.city }} - {{ user.location.state }}</p>
+        </div>
+        <div class="user__infos--footer-icon">
+            <mat-icon>map</mat-icon>
+            <p class="user__infos--footer-txt">{{ user.location.country }}</p>
+        </div>
+    </div>
+</div>
+

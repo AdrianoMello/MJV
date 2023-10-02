@@ -1,0 +1,36 @@
+.toolbar {
+    &__header {
+        background-color: #86abdf;
+        &--title {
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+}
+.content {
+    &__container {
+        background-color: #fff;
+        padding: 20px;
+        min-height: 82vh;
+    }
+}
+
+.sidenav {
+    background-color: #fff;
+    border-right: 1px solid #e9e9e9;
+    padding: 10px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        &--item {
+            background-color: transparent;
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 30px;
+            color: #616161;
+            cursor: pointer;
+        }
+    }
+}

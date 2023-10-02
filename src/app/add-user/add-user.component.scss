@@ -1,0 +1,76 @@
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    &--txt {
+        font-size: 20px;
+        color: #656565;
+        border-bottom: 1px solid #8f8f8f;
+        padding-bottom: 8px;
+    }
+}
+
+.voltar {
+    border: 1px solid #a8a8a8;
+    background-color: #bbbbbb;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    width: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    .form-control {
+        width: 90%;
+        border-radius: 5px;
+        border: 1px solid #a3a3a3;
+        padding: 5px 10px;
+    }
+}
+
+.group-inputs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-save {
+    background-color: #70c565;
+    border: 1px solid #a3a3a3;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+}
+
+.align-button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 576px) {
+    .group-inputs {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group {
+        width: 60%;
+    }
+}
